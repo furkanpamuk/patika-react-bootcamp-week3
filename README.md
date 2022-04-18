@@ -42,11 +42,7 @@
 3. The project is copied by typing the following text into the terminal.<br>
     `git clone https://github.com/furkanpamuk/patika-react-bootcamp-week3.git`
 4. The following text is typed into the terminal to access the project file.<br>
-<<<<<<< HEAD
-`cd week3-marvel-assignment-furkanpamuk `
-=======
 `cd patika-react-bootcamp-week3 `
->>>>>>> 5d73d6ddc46335d9e1e20b1cbd17984b6330a30a
 5. The project is opened with Visual Studio Code by typing the following text into the terminal.<br>
     `code .`
 6. In Visual Studio Code, the terminal is opened and the texts below are written to the terminal.<br>
