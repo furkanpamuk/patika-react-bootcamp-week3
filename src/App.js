@@ -1,3 +1,4 @@
+import React from 'react'
 import './App.css';
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -35,7 +36,7 @@ function App() {
     }
 
     setItems(data.results);
-    setTotalPage(data.total/20);
+    setTotalPage(Math.floor(data.total/20))
     setLoading(false);
   }
 

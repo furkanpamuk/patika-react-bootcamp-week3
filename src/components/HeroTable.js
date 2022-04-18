@@ -1,3 +1,4 @@
+import React from 'react'
 import HeroItem from "./HeroItem";
 
 function HeroTable({ items }) {

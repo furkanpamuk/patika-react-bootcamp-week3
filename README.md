@@ -14,7 +14,7 @@
 3. Aşağıdaki metin terminale yazılarak proje kopyalanır. <br>
 `git clone https://github.com/patika-175-protein-react-bootcamp/week3-marvel-assignment-furkanpamuk.git` 
 4. Aşağıdaki metin terminale yazılarak proje dosyasına erişilir.<br>
-`cd week2-html-css-assignment-furkanpamuk `
+`cd week3-marvel-assignment-furkanpamuk `
 5. Aşağıdaki metin terminale yazılarak Visual Studio Code ile proje açılır.  <br>
 `code .`
 6. Visual Studio Code'de terminal açılır ve alltaki metinler terminale yazılır.<br>
@@ -42,7 +42,7 @@
 3. The project is copied by typing the following text into the terminal.<br>
     `git clone https://github.com/patika-175-protein-react-bootcamp/week3-marvel-assignment-furkanpamuk.git`
 4. The following text is typed into the terminal to access the project file.<br>
-`cd week2-html-css-assignment-furkanpamuk `
+`cd week3-marvel-assignment-furkanpamuk `
 5. The project is opened with Visual Studio Code by typing the following text into the terminal.<br>
     `code .`
 6. In Visual Studio Code, the terminal is opened and the texts below are written to the terminal.<br>

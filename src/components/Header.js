@@ -1,3 +1,4 @@
+import React from 'react'
 import svg1 from '../static/img/image1.svg'
 import svg2 from '../static/img/image2.svg'
 
