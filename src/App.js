@@ -17,46 +17,50 @@ function App() {
   const [totalPage, setTotalPage] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
 
-  const fetch = async () => {
+  const getCharacters = async () => {
     const ssData = sessionStorage.getItem(`page-${currentPage}`);
     let data;
 
     //session storage'dan o sayfa adında gelen veri kontrol edildi varsa bu veri data'ya yazıldı yoksa axios ile veri çekildi ve session storage'e yazıldı.
     if (ssData != null) {
-      const json = JSON.parse(ssData) ;
+      const json = JSON.parse(ssData);
       data = json;
     }
-    else{
-    const result = await axios(`http://gateway.marvel.com/v1/public/characters?ts=1&apikey=6fc2d005ff2338e7833c49790755ed4c&hash=${hash}&offset=${20 * currentPage - 20}`);
+    else {
+      const result = await fetch(`http://gateway.marvel.com/v1/public/characters?ts=1&apikey=6fc2d005ff2338e7833c49790755ed4c&hash=${hash}&offset=${20 * currentPage - 20}`)
+      .then(res => res.json())
+      .then(data2 => data = data2.data)
 
-    sessionStorage.setItem(`page-${currentPage}`, JSON.stringify(result.data.data));
+      
+      sessionStorage.setItem(`page-${currentPage}`, JSON.stringify(data));
 
-    data = result.data.data;
-    
+
+      console.log(data);
+
     }
 
     setItems(data.results);
-    setTotalPage(Math.floor(data.total/20))
+    setTotalPage(Math.floor(data.total / 20))
     setLoading(false);
   }
 
   //currentPage her değiştiğinde fetch fonksiyonu çalıştırıldı.
   useEffect(() => {
-    fetch();
+    getCharacters();
   }, [currentPage]);
 
   return (
     <div className="App">
 
       <Header />
-      
+
       {
         //loading durumu kullanıcıya bildirildi.
-        loading && <div className="loading">Be patient :) Heroes are coming</div> 
+        loading && <div className="loading">Be patient :) Heroes are coming</div>
       }
-    
+
       <HeroTable items={items} ></HeroTable>
-      
+
       {
         !loading && <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} totalPage={totalPage} />
       }
